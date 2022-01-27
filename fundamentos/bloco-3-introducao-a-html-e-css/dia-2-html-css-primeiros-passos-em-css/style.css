@@ -1,0 +1,36 @@
+h2 {
+    color: teal;
+    font-size: 2em;
+}
+
+body {
+    background-color: beige;
+    font-size: 20px;
+}
+
+p {
+    font-family: monospace;
+}
+
+strong {
+    color: red;
+}
+
+#extinta {
+    color: brown;
+    background-color: rgb(223, 255, 205);
+}
+
+#description {
+    color: blue;
+}
+
+.list-style {
+    background-color: blue;
+    color: whitesmoke;
+    font-weight: bold;
+    font-style: italic;
+    line-height: 40px;
+    text-align: center;
+    text-decoration: underline;
+}
