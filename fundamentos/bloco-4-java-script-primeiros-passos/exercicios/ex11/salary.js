@@ -1,4 +1,4 @@
-let salario = 3000;
+let salario = 10000;
 
 if (salario <= 1556.94) {
     salarioInss = salario - (salario * 0.08);
@@ -24,6 +24,9 @@ if (salarioInss <= 1903.98) {
     salarioIr = salarioInss * 0.275 - 869.36
 } 
 
-salarioTotal = salarioInss - salarioIr
+let salarioTotal = salarioInss - salarioIr
 
-console.log('R$', salarioTotal)
+console.log(`R$ ${salarioTotal.toLocaleString('pt-br', {maximumFractionDigits: 2})}`)
+
+// referência de formatação de strings: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Text_formatting
+// referência de formatação de números decimais: https://stackoverflow.com/questions/31420950/can-not-set-minimumfractiondigits-of-tolocalestring 
