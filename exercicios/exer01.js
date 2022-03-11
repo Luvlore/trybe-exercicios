@@ -88,7 +88,7 @@ const smallerName = (books) => {
 
 // EXERCICIO 3
 
-function getNamedBook(books) {
+const getNamedBook = (books) => {
   return books.find(book => book.name.length === 26);
 }
 
@@ -96,7 +96,7 @@ function getNamedBook(books) {
 
 // EXERCICIO 4
 
-function booksOrderedByReleaseYearDesc(books) {
+const booksOrderedByReleaseYearDesc =(books) => {
   return books.sort((a, b) => a.releaseYear > b.releaseYear ? 1 : a.releaseYear === b.releaseYear ? 0 : -1)
 }
 
@@ -104,7 +104,7 @@ function booksOrderedByReleaseYearDesc(books) {
 
 // EXERCICIO 5
 
-function everyoneWasBornOnSecXX(books) {
+const everyoneWasBornOnSecXX = (books) => {
   return books.every((book) => book.author.birthYear <= 2000 && book.author.birthYear >= 1901);
 }
 
@@ -112,7 +112,7 @@ function everyoneWasBornOnSecXX(books) {
 
 // EXERCÍCIO 6
 
-function someBookWasReleaseOnThe80s(books) {
+const someBookWasReleaseOnThe80s = (books) => {
  return books.some((book) => book.releaseYear >= 1980 && book.releaseYear < 1990);
 }
 
@@ -120,7 +120,7 @@ function someBookWasReleaseOnThe80s(books) {
 
 // EXERCICIOS 7
 
-function authorUnique(books) {
+const authorUnique = (books) => {
   return books.every(book => !books.some(bookSome => 
     bookSome.author.birthYear === book.author.birthYear) 
     && (bookSome.author.name !== book.author.name));
@@ -132,7 +132,7 @@ function authorUnique(books) {
 
 // ECERCÍCIO 1
 
-function formatedBookNames(books) {
+const formatedBookNames = (books) => {
   return books.map(book => `${book.name} - ${book.genre} - ${book.author.name}`)
 } 
 
@@ -141,7 +141,7 @@ function formatedBookNames(books) {
 
 // EXERCICIO 2
 
-function nameAndAge(books) {
+const nameAndAge = (books) => {
   return books.sort((a, b) => (
     a.releaseYear - a.author.birthYear) - (b.releaseYear - b.author.birthYear))
       .map(book => ({ age: book.releaseYear - book.author.birthYear, author: book.author.name }));
@@ -152,7 +152,7 @@ function nameAndAge(books) {
 
 // EXERCICIO 3
 
-function fantasyOrScienceFiction() {
+const fantasyOrScienceFiction = (books) => {
   return books.filter(book => book.genre === 'Fantasia' || book.genre === 'Ficção Científica')
 }
 
@@ -160,7 +160,7 @@ function fantasyOrScienceFiction() {
 
 // EXERCÍCIO 4
 
-function oldBooksOrdered(books) {
+const oldBooksOrdered = (books) => {
   return books.sort((a, b) => a.releaseYear - b.releaseYear).filter(book => 2021 - book.releaseYear > 60);
 }
 
@@ -168,7 +168,7 @@ function oldBooksOrdered(books) {
 
 // EXERCÍCIO 5
 
-function fantasyOrScienceFictionAuthors(books) {
+const fantasyOrScienceFictionAuthors = (books) => {
   return fantasyOrScienceFiction(books
     .sort((a, b) => a.author.name > b.author.name ? 1 : a.author.name === b.author.name ? 0 : -1))
     .map(book => book.author.name);
@@ -178,7 +178,7 @@ function fantasyOrScienceFictionAuthors(books) {
 
 // EXERCÍCIO 6
 
-function oldBooks(books) {
+const oldBooks = (books) => {
   return books.filter(book => 2021 - book.releaseYear > 60).map(book => book.name);
 }
 
@@ -186,7 +186,7 @@ function oldBooks(books) {
 
 // EXERCICIO 7
 
-function authorWith3DotsOnName(books) {
+const authorWith3DotsOnName = (books) => {
   return books.filter(book => book.author.name.split('').filter(dot => dot === '.').length === 3);
 }
 
