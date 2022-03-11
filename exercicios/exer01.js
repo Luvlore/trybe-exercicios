@@ -61,8 +61,15 @@ const books = [
   },
 ];
 
-// Adicione o código do exercício aqui:
-const authorBornIn1947 = books.find((elemento) => elemento.author.birthYear === 1947);
+// EXERCICIOS DO BLOCO 8.2
+
+// EXERCÍCIO 1
+
+const authorBornIn1947 = books => books.find((elemento) => elemento.author.birthYear === 1947);
+
+// retorna o primeiro elemento cujo o autor nasceu no ano de 1947
+
+// EXERCICIO 2
 
 const smallerName = (books) => {
   let nameBook;
@@ -77,21 +84,41 @@ const smallerName = (books) => {
   return nameBook
 }
 
+// retorna o livro com o menor nome dentro da lista
+
+// EXERCICIO 3
+
 function getNamedBook(books) {
   return books.find(book => book.name.length === 26);
 }
+
+// retorna o livro que tenha um nome com exatamente 26 caracteres
+
+// EXERCICIO 4
 
 function booksOrderedByReleaseYearDesc(books) {
   return books.sort((a, b) => a.releaseYear > b.releaseYear ? 1 : a.releaseYear === b.releaseYear ? 0 : -1)
 }
 
+// ordena os livros de acordo com o ano de publicação
+
+// EXERCICIO 5
+
 function everyoneWasBornOnSecXX(books) {
   return books.every((book) => book.author.birthYear <= 2000 && book.author.birthYear >= 1901);
 }
 
+// retorna verdadeiro ou falso se todos os autores naceram no século XX
+
+// EXERCÍCIO 6
+
 function someBookWasReleaseOnThe80s(books) {
  return books.some((book) => book.releaseYear >= 1980 && book.releaseYear < 1990);
 }
+
+// retorna verdadeiro ou falso se algum livro foi lançado na década de 80
+
+// EXERCICIOS 7
 
 function authorUnique(books) {
   return books.every(book => !books.some(bookSome => 
@@ -99,9 +126,20 @@ function authorUnique(books) {
     && (bookSome.author.name !== book.author.name));
 }
 
+// retorna verdadeiro ou falso se tiver algum autor com o mesmo nome
+
+// EXERCICIOS DO BLOCO 8.3
+
+// ECERCÍCIO 1
+
 function formatedBookNames(books) {
   return books.map(book => `${book.name} - ${book.genre} - ${book.author.name}`)
-}
+} 
+
+// formata o nomes do livros, gêneros e autores no template: 
+//"nomeDoLivro - genero - autor"
+
+// EXERCICIO 2
 
 function nameAndAge(books) {
   return books.sort((a, b) => (
@@ -109,13 +147,26 @@ function nameAndAge(books) {
       .map(book => ({ age: book.releaseYear - book.author.birthYear, author: book.author.name }));
 }
 
+// ordena de acordo com a idade dos autores, do mais novo ao mais velho, e depois formatando no template:
+// { age: idade, author: nomeDoAutor}
+
+// EXERCICIO 3
+
 function fantasyOrScienceFiction() {
   return books.filter(book => book.genre === 'Fantasia' || book.genre === 'Ficção Científica')
 }
 
+// filtra os apenas os livros do gênero de fantasia e ficção científica
+
+// EXERCÍCIO 4
+
 function oldBooksOrdered(books) {
   return books.sort((a, b) => a.releaseYear - b.releaseYear).filter(book => 2021 - book.releaseYear > 60);
 }
+
+// ordena os livros com mais de 60 anos, do mais antigo para os mais atuais
+
+// EXERCÍCIO 5
 
 function fantasyOrScienceFictionAuthors(books) {
   return fantasyOrScienceFiction(books
@@ -123,10 +174,20 @@ function fantasyOrScienceFictionAuthors(books) {
     .map(book => book.author.name);
 }
 
+// retorna, em ordem alfabética, os autores apenas das obras de ficção científica e fantasia
+
+// EXERCÍCIO 6
+
 function oldBooks(books) {
   return books.filter(book => 2021 - book.releaseYear > 60).map(book => book.name);
 }
 
+// filtra os livros com mais de 60 anos e retorna seus nomes
+
+// EXERCICIO 7
+
 function authorWith3DotsOnName(books) {
   return books.filter(book => book.author.name.split('').filter(dot => dot === '.').length === 3);
 }
+
+// filtra os nomes dos autores com 3 iniciais neles
