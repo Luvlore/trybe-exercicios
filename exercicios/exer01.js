@@ -5,5 +5,3 @@ const arrays = [
 ];
 
 const flatten = () => arrays.reduce((acc, curr) => acc.concat(curr), []);
-
-console.log(flatten())

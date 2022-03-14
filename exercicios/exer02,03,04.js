@@ -185,8 +185,6 @@ const authorWith3DotsOnName = (books) => books.filter(book => book.author.name.s
 const reduceName = books => books.reduce((acc, book, index) => index === books.length - 1 ? `${acc} ${book.author.name}.` : `${acc} ${book.author.name},`
 , '').trim();
 
-console.log(reduceName(books));
-
 // EXERCÍCIO 3
 
 const averageAge = books => books.reduce((result, age) => (result + (age.releaseYear - age.author.birthYear)), 0) / books.length;

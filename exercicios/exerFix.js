@@ -83,5 +83,3 @@ const getBestClass = (acc, materia) => {
 const reportBetter = (students) => students.map((student) => ({
   name: student.nome,
   materia: student.materias.reduce(getBestClass).name}));
-
-console.log(reportBetter(estudantes));
