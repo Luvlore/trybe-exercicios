@@ -1,0 +1,52 @@
+.body {
+  margin: 0;
+  padding: 0;
+}
+
+.contents {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  width: 1000px;
+  justify-content: center;
+}
+
+.header {
+  text-align: center;
+}
+
+.container {
+  margin: 10px auto;
+  background-color: antiquewhite;
+  width: 400px;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 10px;
+}
+
+.container :nth-child(1) {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.container:nth-child(1) {
+  opacity: 50%;
+}
+
+.container:nth-child(2) {
+  background-color: rgb(221, 183, 133);
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.322);
+}
+
+.container :nth-child(3) {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.container :nth-child(2) {
+  font-style: italic;
+}
+
+.footer {
+  text-align: center;
+}
